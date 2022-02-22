@@ -1,0 +1,22 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2.
+
+
+While HTTP/1.1 has been for more than a decade, the HTTP2 which the IETF gave introduced many features to reduce
+page load times. HTTP2 achieves faster loads without performance optimizations which require more human efforts.
+while HTTP/1.1 has many complexities which are significantly reduced in HTTP2 and also have a robust protocol that
+is faster and less complex, though not without its flaws.
+
+HTTP/1.1 vs HTTP2 is no debate at all as HTTP2 is much faster and more reliable than HTTP1. While HTTP1 loads a
+single connection for every single TCP connection, HTTP2 avoids network delay by using multiplexing. HTTP is a 
+network delay-based protocol, so if there is less network delay, then the page loads faster. But just because  
+an impressive increase in bandwidth doesn't mean faster page load time, it just slightly increases the page load
+time. The time is taken to establish a TCP connection and make requests that impact performance. So when we talk 
+about HTTP/1.1 vs HTTP2 in terms of performance it is important to note that a lot of optimizations are adopted 
+by HTTP/1.1 which introduced complexities in terms of developmental efforts as well as network congestion that 
+HTTP2 attempts to address.
+
+HTTP/1.1 supports connection reuse for every TCP connection and pipelining where the client can request several
+resources from the server at once. However, pipelining was hard to implement due to issues such as head of line 
+blocking which was not a usable solution. WHile HTTP2 uses multiplexing, where over single TCP connection resources
+to be delivered are interleaved and arrive at the client almost at the same time.  It also provides a feature called
+server push that allows the server to send data that the client will need but has not yet requested.
